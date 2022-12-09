@@ -1,4 +1,3 @@
-
 import pandas as pd
 import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
@@ -19,5 +18,6 @@ def LRSelect(X_train, y_train, X_train_drop_list):
     vif["features"] = X_train_drop.columns
     
     # yield the results
-    yield res.summary()
-    yield vif.round(1)
+    yield X_train_drop
+    yield res
+    yield vif
