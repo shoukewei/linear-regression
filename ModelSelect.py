@@ -2,7 +2,6 @@ import pandas as pd
 import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
-
 def LRSelect(X_train, y_train, X_train_drop_list):
     # drop variables of training dataset
     X_train_drop = X_train.drop(X_train_drop_list,axis=1)
